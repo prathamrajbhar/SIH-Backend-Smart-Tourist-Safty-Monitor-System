@@ -1,0 +1,209 @@
+from fastapi import APIRouter, Depends, HTTPException, status
+from supabase import Client
+from typing import List, Optional
+from app.database import get_supabase
+from app.models import Tourist, ModelAdapter
+from app.schemas.tourist import TouristCreate, TouristResponse, TouristSummary, TouristUpdate
+import logging
+
+logger = logging.getLogger(__name__)
+router = APIRouter(tags=["Tourist Management"])
+
+
+# ✅ Required Endpoint: /registerTourist
+@router.post("/registerTourist", response_model=TouristResponse, status_code=status.HTTP_201_CREATED)
+async def register_tourist_endpoint(
+    tourist_data: TouristCreate,
+    supabase: Client = Depends(get_supabase)
+):
+    """
+    Register a new tourist in the system.
+    Required endpoint: /registerTourist
+    """
+    try:
+        # Check if contact already exists
+        result = supabase.table("tourists").select("*").eq("contact", tourist_data.contact).execute()
+        if result.data and len(result.data) > 0:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Tourist with this contact number already exists"
+            )
+        
+        # Create new tourist with safety score 100 (default)
+        tourist_dict = tourist_data.dict()
+        tourist_dict["safety_score"] = 100  # Set default safety score
+        
+        result = supabase.table("tourists").insert(tourist_dict).execute()
+        
+        if result.data and len(result.data) > 0:
+            new_tourist = result.data[0]
+            logger.info(f"New tourist registered: {new_tourist['id']} - {new_tourist['name']}")
+            return new_tourist
+        else:
+            raise Exception("Failed to insert tourist data")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error registering tourist: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to register tourist"
+        )
+
+
+# Legacy endpoint for backward compatibility  
+@router.post("/register", response_model=TouristResponse, status_code=status.HTTP_201_CREATED)
+async def register_tourist(
+    tourist_data: TouristCreate,
+    supabase: Client = Depends(get_supabase)
+):
+    """Register a new tourist (legacy endpoint)"""
+    return await register_tourist_endpoint(tourist_data, supabase)
+
+
+@router.get("/{tourist_id}", response_model=TouristResponse)
+async def get_tourist(
+    tourist_id: int,
+    supabase: Client = Depends(get_supabase)
+):
+    """
+    Get tourist details by ID including safety score and trip info.
+    """
+    try:
+        result = supabase.table("tourists").select("*").eq("id", tourist_id).execute()
+        
+        if not result.data or len(result.data) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Tourist not found"
+            )
+        
+        return result.data[0]
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching tourist {tourist_id}: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to fetch tourist details"
+        )
+
+
+@router.get("/", response_model=List[TouristSummary])
+async def list_tourists(
+    skip: int = 0,
+    limit: int = 100,
+    active_only: bool = True,
+    supabase: Client = Depends(get_supabase)
+):
+    """
+    List all tourists with optional filtering.
+    """
+    try:
+        query = supabase.table("tourists").select("*")
+        
+        if active_only:
+            query = query.eq("is_active", True)
+        
+        # Handle pagination
+        query = query.range(skip, skip + limit - 1)
+        result = query.execute()
+        
+        return result.data
+        
+    except Exception as e:
+        logger.error(f"Error listing tourists: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to list tourists"
+        )
+
+
+@router.put("/{tourist_id}", response_model=TouristResponse)
+async def update_tourist(
+    tourist_id: int,
+    tourist_update: TouristUpdate,
+    supabase: Client = Depends(get_supabase)
+):
+    """
+    Update tourist information.
+    """
+    try:
+        # First check if tourist exists
+        check_result = supabase.table("tourists").select("count", count="exact").eq("id", tourist_id).execute()
+        count = check_result.count if hasattr(check_result, 'count') else 0
+        
+        if count == 0:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Tourist not found"
+            )
+        
+        # Filter out None values to avoid overriding with null
+        update_data = {k: v for k, v in tourist_update.dict().items() if v is not None}
+        
+        # Update tourist
+        result = supabase.table("tourists").update(update_data).eq("id", tourist_id).execute()
+        
+        if result.data and len(result.data) > 0:
+            return result.data[0]
+        else:
+            raise Exception("Failed to update tourist data")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error updating tourist {tourist_id}: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to update tourist"
+        )
+
+
+@router.get("/safety/{tourist_id}", response_model=dict)
+async def get_tourist_safety(
+    tourist_id: int,
+    supabase: Client = Depends(get_supabase)
+):
+    """
+    Get tourist safety information including safety score, recent alerts and location history.
+    """
+    try:
+        # Get tourist basic info
+        tourist_result = supabase.table("tourists").select("*").eq("id", tourist_id).execute()
+        
+        if not tourist_result.data or len(tourist_result.data) == 0:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="Tourist not found"
+            )
+        
+        tourist = tourist_result.data[0]
+        
+        # Get recent alerts
+        alerts_result = supabase.table("alerts").select("*").eq("tourist_id", tourist_id).order("timestamp", desc=True).limit(5).execute()
+        
+        # Get recent locations
+        locations_result = supabase.table("locations").select("*").eq("tourist_id", tourist_id).order("timestamp", desc=True).limit(10).execute()
+        
+        # Get AI assessments
+        assessments_result = supabase.table("ai_assessments").select("*").eq("tourist_id", tourist_id).order("created_at", desc=True).limit(5).execute()
+        
+        return {
+            "tourist": tourist,
+            "safety_score": tourist["safety_score"],
+            "recent_alerts": alerts_result.data if alerts_result.data else [],
+            "recent_locations": locations_result.data if locations_result.data else [],
+            "recent_assessments": assessments_result.data if assessments_result.data else []
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error fetching safety info for tourist {tourist_id}: {e}")
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to fetch tourist safety information"
+        )

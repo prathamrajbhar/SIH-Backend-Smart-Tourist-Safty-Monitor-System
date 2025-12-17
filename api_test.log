@@ -1,0 +1,44 @@
+2025-09-28 18:31:42,658 - INFO - PASS: / - Status: 200
+2025-09-28 18:31:44,988 - INFO - PASS: /registerTourist - Status: 200
+2025-09-28 18:31:44,994 - ERROR - FAIL: /tourists/{id} - Status: None - Error: No tourist ID available
+2025-09-28 18:31:44,997 - ERROR - FAIL: /sendLocation - Status: None - Error: No tourist ID available
+2025-09-28 18:31:47,007 - ERROR - FAIL: /pressSOS - Status: None - Error: No tourist ID available
+2025-09-28 18:31:49,418 - INFO - PASS: /getAlerts - Status: 200
+2025-09-28 18:31:49,421 - ERROR - FAIL: /resolveAlert/{id} - Status: None - Error: No alert ID available
+2025-09-28 18:31:49,424 - ERROR - FAIL: /fileEFIR - Status: None - Error: No tourist ID available
+2025-09-28 18:31:51,483 - ERROR - FAIL: /api/v1/ai/training/status - Status: 404 - Error: None
+2025-09-28 18:31:53,542 - ERROR - FAIL: /api/v1/ai/data/stats - Status: 404 - Error: None
+2025-09-28 18:31:55,593 - ERROR - FAIL: /api/v1/ai/training/force - Status: 404 - Error: None
+2025-09-28 18:36:10,027 - INFO - PASS: / - Status: 200
+2025-09-28 18:36:12,280 - INFO - PASS: /registerTourist - Status: 200
+2025-09-28 18:36:12,285 - ERROR - FAIL: /tourists/{id} - Status: None - Error: No tourist ID available
+2025-09-28 18:36:12,288 - ERROR - FAIL: /sendLocation - Status: None - Error: No tourist ID available
+2025-09-28 18:36:14,292 - ERROR - FAIL: /pressSOS - Status: None - Error: No tourist ID available
+2025-09-28 18:36:16,540 - INFO - PASS: /getAlerts - Status: 200
+2025-09-28 18:36:16,542 - ERROR - FAIL: /resolveAlert/{id} - Status: None - Error: No alert ID available
+2025-09-28 18:36:16,545 - ERROR - FAIL: /fileEFIR - Status: None - Error: No tourist ID available
+2025-09-28 18:36:18,583 - ERROR - FAIL: /api/v1/ai/training/status - Status: 404 - Error: None
+2025-09-28 18:36:20,620 - ERROR - FAIL: /api/v1/ai/data/stats - Status: 404 - Error: None
+2025-09-28 18:36:22,671 - ERROR - FAIL: /api/v1/ai/training/force - Status: 404 - Error: None
+2025-09-28 19:10:00,121 - INFO - PASS: / - Status: 200
+2025-09-28 19:10:02,682 - INFO - PASS: /registerTourist - Status: 200
+2025-09-28 19:10:02,686 - ERROR - FAIL: /tourists/{id} - Status: None - Error: No tourist ID available
+2025-09-28 19:10:02,687 - ERROR - FAIL: /sendLocation - Status: None - Error: No tourist ID available
+2025-09-28 19:10:04,689 - ERROR - FAIL: /pressSOS - Status: None - Error: No tourist ID available
+2025-09-28 19:10:07,188 - INFO - PASS: /getAlerts - Status: 200
+2025-09-28 19:10:07,190 - ERROR - FAIL: /resolveAlert/{id} - Status: None - Error: No alert ID available
+2025-09-28 19:10:07,192 - ERROR - FAIL: /fileEFIR - Status: None - Error: No tourist ID available
+2025-09-28 19:10:09,217 - ERROR - FAIL: /api/v1/ai/training/status - Status: 404 - Error: None
+2025-09-28 19:10:11,242 - ERROR - FAIL: /api/v1/ai/data/stats - Status: 404 - Error: None
+2025-09-28 19:10:13,266 - ERROR - FAIL: /api/v1/ai/training/force - Status: 404 - Error: None
+2025-09-28 19:18:33,149 - INFO - PASS: / - Status: 200
+2025-09-28 19:18:35,329 - INFO - PASS: /registerTourist - Status: 200
+2025-09-28 19:18:35,332 - ERROR - FAIL: /tourists/{id} - Status: None - Error: No tourist ID available
+2025-09-28 19:18:35,334 - ERROR - FAIL: /sendLocation - Status: None - Error: No tourist ID available
+2025-09-28 19:18:37,349 - ERROR - FAIL: /pressSOS - Status: None - Error: No tourist ID available
+2025-09-28 19:18:39,608 - INFO - PASS: /getAlerts - Status: 200
+2025-09-28 19:18:39,611 - ERROR - FAIL: /resolveAlert/{id} - Status: None - Error: No alert ID available
+2025-09-28 19:18:39,612 - ERROR - FAIL: /fileEFIR - Status: None - Error: No tourist ID available
+2025-09-28 19:18:41,641 - ERROR - FAIL: /api/v1/ai/training/status - Status: 404 - Error: None
+2025-09-28 19:18:43,672 - ERROR - FAIL: /api/v1/ai/data/stats - Status: 404 - Error: None
+2025-09-28 19:18:45,723 - ERROR - FAIL: /api/v1/ai/training/force - Status: 404 - Error: None

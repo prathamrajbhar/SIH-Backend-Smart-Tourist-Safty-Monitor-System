@@ -1,0 +1,119 @@
+2025-09-28 17:46:02 - root - INFO - Startup details: Environment: development
+2025-09-28 17:46:03 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:46:03 - app.main - INFO - Initializing AI services...
+2025-09-28 17:46:03 - app.main - ERROR - Error initializing AI services: SafetyService.__init__() missing 1 required positional argument: 'db'
+2025-09-28 17:46:03 - app.main - INFO - Application startup complete
+2025-09-28 17:46:18 - root - INFO - Startup details: Environment: development
+2025-09-28 17:46:24 - app.main - ERROR - Failed to connect to database
+2025-09-28 17:46:37 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:46:37.571676
+2025-09-28 17:46:37 - root - INFO - Startup details: Environment: development
+2025-09-28 17:46:37 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:46:37 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:46:37 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:46:37 - app.main - INFO - Initializing AI services...
+2025-09-28 17:46:37 - app.main - ERROR - Error initializing AI services: SafetyService.__init__() missing 1 required positional argument: 'db'
+2025-09-28 17:46:37 - app.main - INFO - Application startup complete
+2025-09-28 17:46:42 - root - INFO - 🛑 APPLICATION STOPPING - Smart Tourist Safety API - 2025-09-28T17:46:42.524057
+2025-09-28 17:46:47 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:46:47.752651
+2025-09-28 17:46:47 - root - INFO - Startup details: Environment: development
+2025-09-28 17:46:48 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:46:48 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:46:48 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:46:48 - app.main - INFO - Initializing AI services...
+2025-09-28 17:46:48 - app.main - ERROR - Error initializing AI services: SafetyService.__init__() missing 1 required positional argument: 'db'
+2025-09-28 17:46:48 - app.main - INFO - Application startup complete
+2025-09-28 17:47:16 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:47:16.125453
+2025-09-28 17:47:16 - root - INFO - Startup details: Environment: development
+2025-09-28 17:47:16 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:47:16 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:47:16 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:47:16 - app.main - INFO - Initializing AI services...
+2025-09-28 17:47:16 - app.main - ERROR - Error initializing AI services: SafetyService.__init__() missing 1 required positional argument: 'db'
+2025-09-28 17:47:16 - app.main - INFO - Application startup complete
+2025-09-28 17:47:33 - root - INFO - 🛑 APPLICATION STOPPING - Smart Tourist Safety API - 2025-09-28T17:47:33.500896
+2025-09-28 17:47:36 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:47:36.006682
+2025-09-28 17:47:36 - root - INFO - Startup details: Environment: development
+2025-09-28 17:47:36 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:47:36 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:47:36 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:47:36 - app.main - INFO - Initializing AI services...
+2025-09-28 17:47:36 - app.main - ERROR - Error initializing AI services: SafetyService.__init__() missing 1 required positional argument: 'db'
+2025-09-28 17:47:36 - app.main - INFO - Application startup complete
+2025-09-28 17:47:43 - root - INFO - 🛑 APPLICATION STOPPING - Smart Tourist Safety API - 2025-09-28T17:47:43.506257
+2025-09-28 17:47:47 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:47:47.266839
+2025-09-28 17:47:47 - root - INFO - Startup details: Environment: development
+2025-09-28 17:47:47 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:47:47 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:47:47 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:47:47 - app.main - INFO - Initializing AI services...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🤖 Initializing Hybrid AI Engine...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📊 Using Supabase client for data access
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🎯 Base models initialized successfully
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🚀 Starting immediate model training with fresh data...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🔥 FORCE RETRAINING: Starting immediate model training...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📊 Force training isolation_forest model...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📈 Fetching isolation_forest training data from 2025-09-25 12:17:47 onwards...
+2025-09-28 17:47:47 - app.services.ai_engine - ERROR - ❌ Error fetching training data for isolation_forest: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:47:47 - app.services.ai_engine - WARNING - ⚠️ No data available for isolation_forest force training
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📊 Force training temporal_autoencoder model...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📈 Fetching temporal_autoencoder training data from 2025-09-25 12:17:47 onwards...
+2025-09-28 17:47:47 - app.services.ai_engine - ERROR - ❌ Error fetching training data for temporal_autoencoder: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:47:47 - app.services.ai_engine - WARNING - ⚠️ No data available for temporal_autoencoder force training
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🎯 Force retraining completed for all models
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - ✅ Hybrid AI Engine initialized successfully
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🎯 Active models: Geofencing + Isolation Forest + Temporal Analysis
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - ⚡ Training frequency: Every 5 minutes
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📡 Assessment frequency: Every 15 seconds
+2025-09-28 17:47:47 - app.main - INFO - AI services initialized successfully
+2025-09-28 17:47:47 - app.main - INFO - Application startup complete
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🔄 Checking models for retraining at 12:17:47
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📊 isolation_forest: Last trained 63894658668s ago (threshold: 300s)
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🚀 Starting retraining for isolation_forest model...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📈 Fetching isolation_forest training data from 2025-09-27 12:17:47 onwards...
+2025-09-28 17:47:47 - app.services.ai_engine - ERROR - ❌ Error fetching training data for isolation_forest: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:47:47 - app.services.ai_engine - WARNING - ⚠️ No data available for isolation_forest retraining
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📊 temporal_autoencoder: Last trained 63894658668s ago (threshold: 300s)
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 🚀 Starting retraining for temporal_autoencoder model...
+2025-09-28 17:47:47 - app.services.ai_engine - INFO - 📈 Fetching temporal_autoencoder training data from 2025-09-27 12:17:47 onwards...
+2025-09-28 17:47:47 - app.services.ai_engine - ERROR - ❌ Error fetching training data for temporal_autoencoder: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:47:47 - app.services.ai_engine - WARNING - ⚠️ No data available for temporal_autoencoder retraining
+2025-09-28 17:47:47 - app.services.ai_engine - ERROR - ❌ Error processing recent locations: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:01 - root - INFO - 🚀 APPLICATION STARTING - Smart Tourist Safety API - 2025-09-28T17:48:01.194984
+2025-09-28 17:48:01 - root - INFO - Startup details: Environment: development
+2025-09-28 17:48:02 - httpx - INFO - HTTP Request: GET https://tqenqwfuywighainnujh.supabase.co/rest/v1/tourists?select=count "HTTP/1.1 206 Partial Content"
+2025-09-28 17:48:02 - app.database - INFO - ✅ Supabase connection successful
+2025-09-28 17:48:02 - app.database - INFO - 📊 Using Supabase managed tables - no local table creation needed
+2025-09-28 17:48:02 - app.main - INFO - Initializing AI services...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🤖 Initializing Hybrid AI Engine...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📊 Using Supabase client for data access
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🎯 Base models initialized successfully
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🚀 Starting immediate model training with fresh data...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🔥 FORCE RETRAINING: Starting immediate model training...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📊 Force training isolation_forest model...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📈 Fetching isolation_forest training data from 2025-09-25 12:18:02 onwards...
+2025-09-28 17:48:02 - app.services.ai_engine - ERROR - ❌ Error fetching training data for isolation_forest: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:02 - app.services.ai_engine - WARNING - ⚠️ No data available for isolation_forest force training
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📊 Force training temporal_autoencoder model...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📈 Fetching temporal_autoencoder training data from 2025-09-25 12:18:02 onwards...
+2025-09-28 17:48:02 - app.services.ai_engine - ERROR - ❌ Error fetching training data for temporal_autoencoder: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:02 - app.services.ai_engine - WARNING - ⚠️ No data available for temporal_autoencoder force training
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🎯 Force retraining completed for all models
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - ✅ Hybrid AI Engine initialized successfully
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🎯 Active models: Geofencing + Isolation Forest + Temporal Analysis
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - ⚡ Training frequency: Every 5 minutes
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📡 Assessment frequency: Every 15 seconds
+2025-09-28 17:48:02 - app.main - INFO - AI services initialized successfully
+2025-09-28 17:48:02 - app.main - INFO - Application startup complete
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🔄 Checking models for retraining at 12:18:02
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📊 isolation_forest: Last trained 63894658682s ago (threshold: 300s)
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🚀 Starting retraining for isolation_forest model...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📈 Fetching isolation_forest training data from 2025-09-27 12:18:02 onwards...
+2025-09-28 17:48:02 - app.services.ai_engine - ERROR - ❌ Error fetching training data for isolation_forest: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:02 - app.services.ai_engine - WARNING - ⚠️ No data available for isolation_forest retraining
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📊 temporal_autoencoder: Last trained 63894658682s ago (threshold: 300s)
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 🚀 Starting retraining for temporal_autoencoder model...
+2025-09-28 17:48:02 - app.services.ai_engine - INFO - 📈 Fetching temporal_autoencoder training data from 2025-09-27 12:18:02 onwards...
+2025-09-28 17:48:02 - app.services.ai_engine - ERROR - ❌ Error fetching training data for temporal_autoencoder: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:02 - app.services.ai_engine - WARNING - ⚠️ No data available for temporal_autoencoder retraining
+2025-09-28 17:48:02 - app.services.ai_engine - ERROR - ❌ Error processing recent locations: 'AIEngineService' object has no attribute 'db_session'
+2025-09-28 17:48:14 - root - INFO - 🛑 APPLICATION STOPPING - Smart Tourist Safety API - 2025-09-28T17:48:14.257762
